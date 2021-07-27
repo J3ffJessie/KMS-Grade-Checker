@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>Grade Check</title>
+</head>
+<body>
+
+  <h1>What Can I Do?</h1>
+
+  <form id="calcform0" autocomplete="off">
+    <div class="form-group row">
+    <label for="currentGrade" class="col-sm-4 col-form-label">Current grade</label>
+    <div class="input-group col-sm-8">
+    <input type="number" min="0" step="any" id="currentGrade" class="form-control" autofocus="">
+    <div class="input-group-append">
+    <span class="input-group-text">%</span>
+    </div>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="gradeWanted" class="col-sm-4 col-form-label">Target class grade</label>
+    <div class="input-group col-sm-8">
+    <input type="number" min="0" step="any" id="gradeWanted" class="form-control">
+    <div class="input-group-append">
+    <span class="input-group-text">%</span>
+    </div>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="weight0" class="col-sm-4 col-form-label">Assignment Weight</label>
+    <div class="input-group col-sm-8">
+    <input type="number" min="0" step="any" id="weight0" class="form-control" placeholder="Test=70 Classwork=30">
+    <div class="input-group-append">
+    <span class="input-group-text">%</span>
+    </div>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-4 col-form-label">&nbsp;</label>
+    <div class="input-group col-sm-8">
+    <button type="button" id="calcbtn0" onclick="calculateGrade()" title="Calculate" class="btn btn-success"><span>=</span> Calculate</button>
+    <button type="reset" id="resetbtn0" title="Reset" class="btn btn-secondary ml-1"><span>×</span> Reset</button>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="final0" class="col-sm-4 col-form-label">Score needed to get target class grade</label>
+    <div class="input-group col-sm-8">
+    <input type="number" min="0" step="any" id="final0" class="form-control" readonly="">
+    <div class="input-group-append" style="height:38px">
+    <span class="input-group-text">%</span>
+    </div>
+    </div>
+    </div>
+    <div class="form-group">
+    <div id="finalcircle0" class="red small mb-3"></div>
+    </div>
+    </form>
+  
+</body>
+<script src="grades.js"></script>
+</html>
